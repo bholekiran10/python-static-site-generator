@@ -1,4 +1,4 @@
-import Path from pathlib
+from pathlib import Path
 import os
 class Site:
     def __init__(self, source, dest):
