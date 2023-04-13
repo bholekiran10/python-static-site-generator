@@ -1,5 +1,5 @@
 from pathlib import Path
-import os.path
+
 class Site:
     def __init__(self, source, dest):
         self.source = Path(source)
