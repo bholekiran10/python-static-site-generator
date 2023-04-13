@@ -14,11 +14,11 @@ class Parser:
         with open(path, 'r') as reader1:
             return reader1.read()  
     def write(self, path, dest, content, ext =".html"):
-        full_path = self.dest / path.with_suffix(ext).name
+        full_path = dest / path.with_suffix(ext).name
         with open(full_path, 'w') as writer:
             writer.write(content)     
     def copy(self, path, source, dest):
-        shutil.copy2(path, (self.dest / path.relative_to(self.source)))
+        shutil.copy2(path, (dest / path.relative_to(source)))
 
 class ResourceParser(Parser):
     extensions = [".jpg", ".png", ".gif", ".css", ".html"]
